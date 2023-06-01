@@ -1,17 +1,17 @@
-import React from 'react'
-import classes from './Header.module.css'
-import { Link } from 'react-router-dom';
+import React from "react";
+import classes from "./Header.module.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const user = {
-    name: 'Ganga',
+    name: "",
   };
 
   const cart = {
-    totalCount: 10,
+    totalCount: 0,
   };
 
-  const logout = () => {}
+  const logout = () => {};
 
   return (
     <header className={classes.header}>
@@ -21,8 +21,7 @@ export default function Header() {
         </Link>
         <nav>
           <ul>
-            {
-              user?(
+            {user ? (
               <li className={classes.menu_container}>
                 <Link to="/profile">{user.name}</Link>
                 <div className={classes.menu}>
@@ -31,18 +30,21 @@ export default function Header() {
                   <a onClick={logout}>Logout</a>
                 </div>
               </li>
-              ): (<Link to="/login">Login</Link>
-           ) }
+            ) : (
+              <Link to="/login">Login</Link>
+            )}
 
-           <li>
-            <Link to="/cart">
-              Cart
-              {cart.totalCount>0 && <span className={classes.cart_count}>{cart.totalCount}</span>}
-            </Link>
-           </li>
+            <li>
+              <Link to="/cart">
+                Cart
+                {cart.totalCount > 0 && (
+                  <span className={classes.cart_count}>{cart.totalCount}</span>
+                )}
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
-  )
+  );
 }

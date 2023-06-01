@@ -11,7 +11,7 @@ const LoginPage = () => {
   };
 
   const handleLogin = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
 
     if (userType === "user") {
       return <UserLoginForm />;

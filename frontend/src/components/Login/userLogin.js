@@ -17,7 +17,7 @@ export default function UserLoginForm() {
     e.preventDefault();
 
     // Perform login logic here (e.g., API call)
-    if (username === "admin@gmail.com" && password === "password") {
+    if (username === "admin" && password === "password") {
       setLoggedIn(true);
       console.log("Login successful!");
       // Perform further actions upon successful login

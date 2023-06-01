@@ -1,0 +1,46 @@
+.order-summary {
+    padding: 20px;
+  }
+  
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .item-info {
+    flex-grow: 1;
+  }
+  
+  .item-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .item-quantity {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .item-price {
+    font-size: 18px;
+  }
+  
+  .total-price {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .total-price h2 {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .total-price p {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  

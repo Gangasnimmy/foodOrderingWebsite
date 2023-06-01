@@ -1,0 +1,36 @@
+.restaurant-listing {
+    padding: 20px;
+  }
+  
+  .restaurant-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .restaurant-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .restaurant-details {
+    flex-grow: 1;
+  }
+  
+  .restaurant-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .restaurant-rating {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .restaurant-description {
+    font-size: 14px;
+    color: #888;
+  }
+  

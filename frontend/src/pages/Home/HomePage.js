@@ -1,30 +1,15 @@
-import React, { useEffect, useReducer } from 'react'
-import Thumbnails from '../../components/Thumbnails/Thumbnails';
-import { getAll } from '../../services/foodService';
+import React from "react";
+import classes from "./HomePage.module.css";
 
-const initialState = { foods: [] };
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case 'FOODS_LOADED':
-      return { ...state, foods: action.payload };
-    default:
-      return state;  
-  }
+const HomePage = () => {
+  return (
+    <div className="landing-page">
+      <h1>Welcome to Food Ordering Website</h1>
+      <p>Order delicious food from your favorite restaurants!</p>
+      <button className="btn btn-primary">Sign in</button>
+      <button className="btn btn-primary">Login</button>
+    </div>
+  );
 };
 
-export default function HomePage() {
-  const [state, dispatch] = useReducer(reducer, initialState);
-  const { foods } = state;
-
-  useEffect(() => {
-    getAll().then(foods => dispatch({type: 'FOODS_LOADED', payload: foods}));
-
-  }, []);
-
-  return (
-    <>
-    <Thumbnails foods={foods} />
-    </>
-  )
-}
+export default HomePage;
